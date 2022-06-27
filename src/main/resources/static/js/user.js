@@ -23,14 +23,14 @@ let index = {
 		// ajax가 통신을 성공하고 서버가 json을 리턴해주면 자동으로 자바 오브젝트로 변화해줌!!
 		$.ajax({
 			type: "POST",
-			url: "/blog/api/user",
+			url: "/api/user",
 			data: JSON.stringify(data), //http body 데이터
 			contentType: "application/json; charset=utf-8", //body데이터 타입(MIME)
 			dataType: "json" //요청에 대한 응답이 서버로 왔을때 기본적으로 모든 것이 문자열(생긴게 json이라면) => javascript 
 		}).done(function(resp) { //정상
 			alert("회원가입이 완료되었습니다.");
 			console.log(resp);
-			location.href = "/blog";
+			location.href = "/";
 		}).fail(function(error) { //실패
 			alert(JSON.stringify(error));
 		}); // ajax 통신을 이용해 3개의 데이터를 json으로 변경하여 insert요청!!
@@ -44,14 +44,14 @@ let index = {
 
 		$.ajax({
 			type: "POST",
-			url: "/blog/api/user/login",
+			url: "/api/user/login",
 			data: JSON.stringify(data), //http body 데이터
 			contentType: "application/json; charset=utf-8", //body데이터 타입(MIME)
 			dataType: "json" //요청에 대한 응답이 서버로 왔을때 기본적으로 모든 것이 문자열(생긴게 json이라면) => javascript 
 		}).done(function(resp) { //정상
 			alert("로그인이 완료되었습니다.");
 			console.log(resp);
-			location.href = "/blog";
+			location.href = "/";
 		}).fail(function(error) { //실패
 			alert(JSON.stringify(error));
 		});

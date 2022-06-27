@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+	
 <%@ include file="../layout/header.jsp"%>
 
 <div class="container">
-	<form action="#"  method="post">
+	<form>
 		<div class="form-group">
 			<label for="username">Username:</label> 
 			<input type="text"  name="username"
@@ -19,10 +19,13 @@
 			<label class="form-check-label"> 
 			<input name="remember" class="form-check-input" type="checkbox"> 로그인 정보 기억
 			</label>
+			
 		</div>
-		<button id="btn-login" class="btn btn-primary">로그인</button>
+		
 	</form>
+	<button id="btn-login" class="btn btn-primary">로그인</button>
 </div>
 
+<script src="/blog/js/user.js"></script>
 <%@ include file="../layout/footer.jsp"%>
 

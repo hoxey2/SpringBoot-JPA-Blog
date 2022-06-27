@@ -30,12 +30,12 @@ public class DummyControllerTest {
 	
 	@Autowired // 의존성 주입(DI)
 	private UserRepository userRepository;
-	
-	// save함수는 id를 전달하지 않으면 insert를 해주고
-	// save함수는 id를 전달하면 해당 id에 대한 데이터가 있으면 update를 해주고
-	// save함수는 id를 전달하면 해당 id에 대한 데이터가 없으면 insert를 함.  
-	// email, password
-
+//	
+//	// save함수는 id를 전달하지 않으면 insert를 해주고
+//	// save함수는 id를 전달하면 해당 id에 대한 데이터가 있으면 update를 해주고
+//	// save함수는 id를 전달하면 해당 id에 대한 데이터가 없으면 insert를 함.  
+//	// email, password
+//
 	@DeleteMapping("/dummy/user/{id}")
 	public String delete(@PathVariable int id) {
 		try {
